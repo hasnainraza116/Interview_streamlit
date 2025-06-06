@@ -157,7 +157,7 @@ if st.session_state.feedback_shown:
     conversation_history = "\n".join([f"{msg['role']}: {msg['content']}" for msg in st.session_state.messages])
 
     # Initialize new OpenAI client instance for feedback
-    feedback_client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+    feedback_client = OpenAI(api_key=st.secrets["OPEN_API_KEY"])
 
     # Generate feedback using the stored messages and write a system prompt for the feedback
     feedback_completion = feedback_client.chat.completions.create(
